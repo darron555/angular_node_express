@@ -3,6 +3,7 @@ const passport = require('passport');
 const upload = require('../middleware/upload');
 const controller = require('../controllers/category');
 
+
 const router = express.Router({});
 
 router.get('/', passport.authenticate('jwt', {session: false}), controller.getAll);
